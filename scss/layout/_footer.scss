@@ -1,0 +1,75 @@
+
+
+.contact {
+  @include padding($top: 1px, $bottom: 50px);
+  @extend %center;
+  border-bottom: 1px solid #fff;
+
+  @media #{$brk-narrow} {
+
+  	li {
+	  font-size: 22px;
+	}
+
+	p {
+	  @include padding(25%, 25%);
+	  font-size: 22px;
+	}
+  }
+
+}
+
+
+.contact-info li {
+  margin: 10px 0;
+}
+
+
+
+footer {
+	@include padding($top: 1em, $bottom: 1.5em);
+
+	li {
+	  display:inline-block; 
+	}
+
+	a {
+	  color: $white;
+	}
+
+	.footer-nav {
+	  display: none;
+	}
+
+	.top {
+	  float: right;
+	}
+
+	.sname {
+	  float: left;
+	}
+
+	@media #{$brk-narrow} {
+
+	   margin: 0 1%;
+
+	  .top {
+	    display: none;
+	  }
+
+	  .footer-nav {
+	    display: initial;
+	    float: right;
+	    margin: 0;
+	  }
+
+	  .footer-nav li {
+	    margin-left: 10px;
+	  }
+	}
+
+	@media #{$brk-wide} {
+		margin: 0;
+	}
+}
+

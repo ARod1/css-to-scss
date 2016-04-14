@@ -1,0 +1,43 @@
+
+.porfolio {
+	@media #{$brk-wide} {
+	  @include padding(0, 0);
+	}
+
+}
+
+
+.col {
+  @extend %center;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 3em;
+
+  	p {
+	  @extend %double-padding;
+	}
+
+	@media #{$brk-narrow} {
+		width: 48%;
+		float: left;
+		margin: 10px 1%;
+		height: 480px;
+	}
+
+	@media #{$brk-wide} {
+		width: 32%;
+		display: inline-block;
+		margin: 0;
+	}
+  
+}
+
+
+.col-off {
+  @media #{$brk-wide} {
+  	@include margin(2%, 2%);
+  }
+
+}
+
+

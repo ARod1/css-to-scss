@@ -1,0 +1,88 @@
+
+.main-nav {
+
+  a {
+  display: inline-block;
+  padding: .7em;
+  } 
+
+  @media #{$brk-narrow} {
+    text-align: center;
+
+    li {
+      display: inline-block;
+      background: none;
+    }
+  }
+
+  @media #{$brk-wide} {
+    @include margin($top: 0, $bottom: 0);
+    float: right;
+  }
+
+}
+
+
+.name a,
+.main-nav a {
+  color: $black;
+}
+
+.main-header {
+  padding: 1em 0;
+
+  @media #{$brk-narrow} {
+    padding: 2em 0;
+  }
+
+}
+
+
+
+.profile-pic {
+  width: 80%;
+  padding-bottom: 1.5em;
+}
+
+.intro {
+  @include padding($top: 1.75em, $bottom: 3em);
+  @extend %center;
+
+  @media #{$brk-narrow} {
+
+  img {
+      padding-right: 8px;
+      width: 50%;
+      float: right;
+    }
+
+  p {
+      @include padding(8px, 10px);
+      width: 50%;
+      float: right;
+      margin-top: -3px;
+      font-size: 22px;
+      text-align: left;
+    }
+  }
+
+  @media #{$brk-wide} {
+    
+    img {
+        padding-right: 0;
+      }
+
+    p {
+      padding-left: 0;
+    }
+  } 
+
+}
+
+.title-one {
+  margin-bottom: 55px;
+}
+
+.title-two {
+  margin-bottom: 40px; 
+}

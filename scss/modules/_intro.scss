@@ -1,0 +1,38 @@
+
+.profile-pic {
+  width: 80%;
+  padding-bottom: 1.5em;
+}
+
+.intro {
+  @extend %center;
+  @include pad($p-top: 1.75em, $p-bottom: 3em);
+
+  @include mq(medium) {
+  	img {
+  		width: 50%;
+  		float: right;
+  		padding-right: 8px;
+  	}
+		
+		p {
+		  @include pad(8px, 10px);
+  		width: 50%;
+  		float: right;
+  		margin-top: -3px;
+  		text-align: left;
+		  font-size: $font-size-sec;
+		}
+  }//end of mq
+
+  @include mq(large) {
+  	 p {
+		  padding-left: 0;
+		}
+
+		img {
+		  padding-right: 0;
+		}
+  }//mq end
+}
+

@@ -1,41 +1,36 @@
-
 img {
   width: 100%;
 }
 
-p {
-  line-height: 1.5em;
-}
-
-li,
-p {
-  font-size: $main-size;
-}
 
 ul {
-  padding-left: 0;
+  @include pad(0);
 }
 
 body {
-  background: #23B5AF;
-  color: white;
+  font-size: $font-size;
+  background: $bk-color;
+  color: $font-color;
   font-family: $font-family;
   letter-spacing: 2px;
+  line-height: 1.5em;
 }
 
 h3 {
- text-align: center;
+ @extend %center;
  margin-top: 47px;
  font-weight: 700;
- 
 }
 
-.clearfix::after {
-		content: "";
-		display: table;
-		clear: both;
+footer {
+  @include pad($p-top: 1em, $p-bottom: 1.5em);
+  
+  li {
+    display:inline-block; 
+  }
+
+  a {
+    color: $white;
+  }
+
 }
-
-
-
-

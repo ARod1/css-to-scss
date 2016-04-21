@@ -1,0 +1,21 @@
+@mixin pad($p-left:null, $p-right:null, $p-top:null, $p-bottom:null) {
+	padding-left: $p-left;
+	padding-right: $p-right;
+	padding-top: $p-top;
+	padding-bottom: $p-bottom;
+}
+
+@mixin mq($break) {
+	@if $break == "medium" {
+	  @media (min-width: $brk-md) {
+	    @content;
+	  }
+	}
+	@else if $break == "large" {
+	  @media (min-width: $brk-lg) {
+	    @content;
+	  }
+	}
+
+
+}

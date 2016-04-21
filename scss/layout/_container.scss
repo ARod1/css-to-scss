@@ -1,0 +1,55 @@
+.container {
+  @extend %clearfix;
+  @include pad(1em, 1em);
+
+  @include mq(large) {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+}
+
+.col {
+  @extend %center;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 3em;
+
+  p {
+	  @include pad(2em, 2em);
+	}
+
+  @include mq(medium) {
+    width: 48%;
+    float: left;
+    margin: 10px 1%;
+    height: 480px;
+  }
+
+  @include mq(large) {
+    width: 32%;
+    display: inline-block;
+    margin: 0;
+  }
+  
+}
+
+
+.porfolio {
+  @include mq(large) {
+    padding-left: 0;
+    padding-right: 0;
+
+    .col-off {
+      margin-left: 2%;
+      margin-right: 2%;
+    }
+  }
+}
+
+.title-one {
+  margin-bottom: 55px;
+}
+
+.title-two {
+  margin-bottom: 40px; 
+}

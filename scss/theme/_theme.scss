@@ -1,0 +1,9 @@
+
+.offset {
+  @include pad($p-top: 10px, $p-bottom: 10px);
+  background-color: $offset-color;
+
+  @include mq(large) {
+  	@include pad(2em, 2em);
+  }
+}

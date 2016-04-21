@@ -1,3 +1,11 @@
+.container::after, .main-header::after {
+  content: "";
+  display: table;
+  clear: both; }
+
+h3, .col, .main-header .name, .main-header .main-nav li, .intro, .contact {
+  text-align: center; }
+
 /*! normalize.css v1.1.0 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
@@ -447,142 +455,20 @@ a {
 img {
   width: 100%; }
 
-p {
-  line-height: 1.5em; }
-
-li,
-p {
-  font-size: 18px; }
-
 ul {
   padding-left: 0; }
 
 body {
+  font-size: 18px;
   background: #23B5AF;
-  color: white;
+  color: #fff;
   font-family: "Roboto Condensed", sans-serif;
-  letter-spacing: 2px; }
+  letter-spacing: 2px;
+  line-height: 1.5em; }
 
 h3 {
-  text-align: center;
   margin-top: 47px;
   font-weight: 700; }
-
-.clearfix::after {
-  content: "";
-  display: table;
-  clear: both; }
-
-.container .name, .container .main-nav li {
-  text-align: center;
-  margin: 6px 0px; }
-
-.container {
-  padding-left: 1em;
-  padding-right: 1em; }
-
-.col p {
-  padding-left: 2em;
-  padding-right: 2em; }
-
-.intro, .contact, .col {
-  text-align: center; }
-
-.offset {
-  background-color: #3A3A3C;
-  padding-top: 10px;
-  padding-bottom: 10px; }
-
-@media (min-width: 1024px) {
-  .offset {
-    padding-left: 2em;
-    padding-right: 2em; } }
-
-.container .name {
-  font-weight: 400;
-  margin-bottom: 20px;
-  font-size: 32px; }
-.container .main-nav li {
-  background: #fff;
-  font-size: 1.1em; }
-@media (min-width: 1024px) {
-  .container {
-    padding-left: 2em;
-    padding-right: 2em; }
-    .container .name {
-      float: left; } }
-
-.main-nav a {
-  display: inline-block;
-  padding: .7em; }
-@media (min-width: 768px) {
-  .main-nav {
-    text-align: center; }
-    .main-nav li {
-      display: inline-block;
-      background: none; } }
-@media (min-width: 1024px) {
-  .main-nav {
-    margin-top: 0;
-    margin-bottom: 0;
-    float: right; } }
-
-.name a,
-.main-nav a {
-  color: #000; }
-
-.main-header {
-  padding: 1em 0; }
-  @media (min-width: 768px) {
-    .main-header {
-      padding: 2em 0; } }
-
-.profile-pic {
-  width: 80%;
-  padding-bottom: 1.5em; }
-
-.intro {
-  padding-top: 1.75em;
-  padding-bottom: 3em; }
-  @media (min-width: 768px) {
-    .intro img {
-      padding-right: 8px;
-      width: 50%;
-      float: right; }
-    .intro p {
-      padding-left: 8px;
-      padding-right: 10px;
-      width: 50%;
-      float: right;
-      margin-top: -3px;
-      font-size: 22px;
-      text-align: left; } }
-  @media (min-width: 1024px) {
-    .intro img {
-      padding-right: 0; }
-    .intro p {
-      padding-left: 0; } }
-
-.title-one {
-  margin-bottom: 55px; }
-
-.title-two {
-  margin-bottom: 40px; }
-
-.contact {
-  padding-top: 1px;
-  padding-bottom: 50px;
-  border-bottom: 1px solid #fff; }
-  @media (min-width: 768px) {
-    .contact li {
-      font-size: 22px; }
-    .contact p {
-      padding-left: 25%;
-      padding-right: 25%;
-      font-size: 22px; } }
-
-.contact-info li {
-  margin: 10px 0; }
 
 footer {
   padding-top: 1em;
@@ -591,36 +477,22 @@ footer {
     display: inline-block; }
   footer a {
     color: #fff; }
-  footer .footer-nav {
-    display: none; }
-  footer .top {
-    float: right; }
-  footer .sname {
-    float: left; }
-  @media (min-width: 768px) {
-    footer {
-      margin: 0 1%; }
-      footer .top {
-        display: none; }
-      footer .footer-nav {
-        display: initial;
-        float: right;
-        margin: 0; }
-      footer .footer-nav li {
-        margin-left: 10px; } }
-  @media (min-width: 1024px) {
-    footer {
-      margin: 0; } }
 
-@media (min-width: 1024px) {
-  .porfolio {
-    padding-left: 0;
-    padding-right: 0; } }
+.container {
+  padding-left: 1em;
+  padding-right: 1em; }
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2em;
+      padding-right: 2em; } }
 
 .col {
   width: 100%;
   margin: 0 auto;
   padding-bottom: 3em; }
+  .col p {
+    padding-left: 2em;
+    padding-right: 2em; }
   @media (min-width: 768px) {
     .col {
       width: 48%;
@@ -634,8 +506,120 @@ footer {
       margin: 0; } }
 
 @media (min-width: 1024px) {
-  .col-off {
-    margin-left: 2%;
-    margin-right: 2%; } }
+  .porfolio {
+    padding-left: 0;
+    padding-right: 0; }
+    .porfolio .col-off {
+      margin-left: 2%;
+      margin-right: 2%; } }
+
+.title-one {
+  margin-bottom: 55px; }
+
+.title-two {
+  margin-bottom: 40px; }
+
+.main-header {
+  padding: 1em 0; }
+  .main-header .name {
+    font-weight: 400; }
+    .main-header .name a {
+      color: #000; }
+  .main-header .main-nav li {
+    margin: 6px 0px;
+    background: #fff;
+    font-size: 1.1em; }
+  .main-header .main-nav a {
+    color: #000;
+    display: inline-block;
+    padding: .7em; }
+  @media (min-width: 768px) {
+    .main-header {
+      padding: 2em 0; }
+      .main-header .main-nav {
+        text-align: center; }
+        .main-header .main-nav li {
+          display: inline-block;
+          background: none; }
+        .main-header .main-nav a:hover {
+          border-bottom: 1px solid white; } }
+  @media (min-width: 1024px) {
+    .main-header .name {
+      float: left; }
+    .main-header .main-nav {
+      float: right;
+      margin-top: 0;
+      margin-bottom: 0; } }
+
+footer .top {
+  float: right; }
+footer .sname {
+  float: left; }
+footer .footer-nav {
+  display: none; }
+@media (min-width: 768px) {
+  footer {
+    margin: 0 1%; }
+    footer .top {
+      display: none; }
+    footer .footer-nav {
+      display: initial;
+      float: right;
+      margin: 0; }
+      footer .footer-nav li {
+        margin-left: 10px; } }
+@media (min-width: 1024px) {
+  footer {
+    margin: 0; } }
+
+.profile-pic {
+  width: 80%;
+  padding-bottom: 1.5em; }
+
+.intro {
+  padding-top: 1.75em;
+  padding-bottom: 3em; }
+  @media (min-width: 768px) {
+    .intro img {
+      width: 50%;
+      float: right;
+      padding-right: 8px; }
+    .intro p {
+      padding-left: 8px;
+      padding-right: 10px;
+      width: 50%;
+      float: right;
+      margin-top: -3px;
+      text-align: left;
+      font-size: 22px; } }
+  @media (min-width: 1024px) {
+    .intro p {
+      padding-left: 0; }
+    .intro img {
+      padding-right: 0; } }
+
+.contact {
+  padding-top: 1px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #fff; }
+  @media (min-width: 768px) {
+    .contact p {
+      padding-left: 25%;
+      padding-right: 25%;
+      font-size: 22px; }
+    .contact li {
+      font-size: 22px; } }
+
+.contact-info li {
+  margin: 10px 0; }
+
+.offset {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #3A3A3C; }
+  @media (min-width: 1024px) {
+    .offset {
+      padding-left: 2em;
+      padding-right: 2em; } }
 
 /*# sourceMappingURL=app.css.map */

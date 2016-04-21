@@ -1,88 +1,67 @@
-
-.main-nav {
-
-  a {
-  display: inline-block;
-  padding: .7em;
-  } 
-
-  @media #{$brk-narrow} {
-    text-align: center;
-
-    li {
-      display: inline-block;
-      background: none;
-    }
-  }
-
-  @media #{$brk-wide} {
-    @include margin($top: 0, $bottom: 0);
-    float: right;
-  }
-
-}
-
-
-.name a,
-.main-nav a {
-  color: $black;
-}
-
 .main-header {
+  @extend %clearfix;
   padding: 1em 0;
 
-  @media #{$brk-narrow} {
-    padding: 2em 0;
-  }
-
-}
-
-
-
-.profile-pic {
-  width: 80%;
-  padding-bottom: 1.5em;
-}
-
-.intro {
-  @include padding($top: 1.75em, $bottom: 3em);
+  .name {
   @extend %center;
+  font-weight: 400;
+  
+    a {
+      color: $black;
+    }
+  } //name end
 
-  @media #{$brk-narrow} {
+  .main-nav {
 
-  img {
-      padding-right: 8px;
-      width: 50%;
-      float: right;
+    li {
+      @extend %center;
+      margin: 6px 0px;  
+      background: $white;
+      font-size: 1.1em;
     }
 
-  p {
-      @include padding(8px, 10px);
-      width: 50%;
-      float: right;
-      margin-top: -3px;
-      font-size: 22px;
-      text-align: left;
-    }
-  }
+    a {
+      color: #000;
+      display: inline-block;
+      padding: .7em;
+    }  
+  } //main-nav end
 
-  @media #{$brk-wide} {
-    
-    img {
-        padding-right: 0;
+  @include mq(medium) {
+    padding: 2em 0;
+
+    .main-nav {
+      text-align: center;
+
+      li {
+        display: inline-block;
+        background: none;
       }
 
-    p {
-      padding-left: 0;
+      a:hover {
+        border-bottom: 1px solid white;
+      }
     }
-  } 
+  }//mq end
 
-}
+  @include mq(large) {
+    .name {
+      float: left;
+    }
 
-.title-one {
-  margin-bottom: 55px;
-}
+    .main-nav {
+      float: right;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }//mq end
 
-.title-two {
-  margin-bottom: 40px; 
-}
+} 
+
+
+
+
+
+
+
+

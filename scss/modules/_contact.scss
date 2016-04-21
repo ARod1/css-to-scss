@@ -1,0 +1,21 @@
+
+.contact {
+  @extend %center;
+  @include pad($p-top: 1px, $p-bottom: 50px);
+  border-bottom: 1px solid #fff;
+
+  @include mq(medium) {
+  	p {
+  	  @include pad(25%, 25%);
+	  font-size: $font-size-sec;
+	}
+
+	li {
+	  font-size: $font-size-sec;
+	}
+  }//end of mq
+}
+
+.contact-info li {
+  margin: 10px 0;
+}
